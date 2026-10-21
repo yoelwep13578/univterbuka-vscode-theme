@@ -1,0 +1,7 @@
+{
+  "workbench.colorTheme": "UnivTerbuka Dark",
+  "// Ganti ke \"UnivTerbuka Light\" untuk mode terang": "",
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active"
+}

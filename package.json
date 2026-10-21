@@ -1,0 +1,46 @@
+{
+  "name": "univterbuka-vscode-theme",
+  "displayName": "UnivTerbuka VS Code Color Theme",
+  "description": "Light and Dark theme color for Visual Studio Code inspired from Universitas Terbuka colors, semi-harmonized by following HCI & WCAG.",
+  "version": "1.0.0",
+  "publisher": "univterbuka-theme",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "universitas terbuka",
+    "univ terbuka",
+    "ut",
+    "indonesia",
+    "theme",
+    "light",
+    "dark",
+    "blue",
+    "yellow",
+    "adaptive",
+    "light dark"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "UnivTerbuka Light",
+        "uiTheme": "vs",
+        "path": "./themes/univterbuka-light-color-theme.json"
+      },
+      {
+        "label": "UnivTerbuka Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/univterbuka-dark-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoelwep13578/univterbuka-vscode-theme"
+  }
+}
