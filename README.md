@@ -2,6 +2,10 @@
 
 <p align="center">Color theme untuk Visual Studio Code bernuansa Universitas Terbuka (UT), yang terinspirasi dari palet warna resmi logo UT dan diharmonisasikan mengikuti prinsip HCI/IMK, keterbacaan jangka panjang, dan rasio kontras WCAG 2.1.</p>
 
+<div align="center">
+<img width="600" alt="Screenshot Comparison" src="./images/screenshot-split4.jpg" />
+</div>
+
 ## Sedikit Latar Belakang
 
 Tema warna ini dibuat sebagai reaksi rasa gabut dan iseng setelah melihat seseorang memamerkan editor VS Code berwarna biru.
@@ -79,7 +83,7 @@ Palet lengkapnya ada di [`PALETTE.md`](./PALETTE.md).
 
 ### Cara 1. Install dari File `.vsix` (Paling Mudah)
 
-Download file `.vsix` yang siap diinstal dari Release.
+Download file `.vsix` yang siap diinstal dari Release atau siapkan dengan mem-build sendiri.
 
 **Instalasi**
 
