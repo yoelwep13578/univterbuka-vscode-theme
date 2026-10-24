@@ -85,6 +85,8 @@ Palet lengkapnya ada di [`PALETTE.md`](./PALETTE.md).
 
 Download file `.vsix` yang siap diinstal dari Release atau siapkan dengan mem-build sendiri.
 
+[![GitHub Release](https://img.shields.io/github/v/release/yoelwep13578/univterbuka-vscode-theme?style=for-the-badge&color=yellow)](https://github.com/yoelwep13578/univterbuka-vscode-theme/releases/latest)
+
 <details>
 <summary>Prasyarat dan cara tambahan untuk mem-build sendiri</summary>
 
