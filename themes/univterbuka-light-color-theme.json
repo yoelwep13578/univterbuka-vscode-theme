@@ -172,7 +172,22 @@
     "tree.indentGuidesStroke": "#D6DEE8",
     "editorMarkerNavigationError.background": "#B42318",
     "editorMarkerNavigationWarning.background": "#FFDE00",
-    "editorMarkerNavigationInfo.background": "#034694"
+    "editorMarkerNavigationInfo.background": "#034694",
+    "list.focusHighlightForeground": "#FFDE00",
+    "quickInputList.focusBackground": "#034694",
+    "quickInputList.focusForeground": "#FFFFFF",
+    "quickInputList.focusIconForeground": "#FFDE00",
+    "quickInputList.focusHighlightForeground": "#FFDE00",
+    "list.filterMatchBackground": "#FFDE0059",
+    "list.filterMatchBorder": "#7A5C00",
+    "editorSuggestWidget.selectedForeground": "#17202A",
+    "editorSuggestWidget.selectedIconForeground": "#034694",
+    "editorSuggestWidget.highlightForeground": "#034694",
+    "editorSuggestWidget.focusHighlightForeground": "#034694",
+    "editorHoverWidget.highlightForeground": "#034694",
+    "terminal.selectionBackground": "#03469440",
+    "terminal.inactiveSelectionBackground": "#03469426",
+    "input.selectionBackground": "#FFDE0066"
   },
   "tokenColors": [
     {
