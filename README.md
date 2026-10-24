@@ -85,27 +85,40 @@ Palet lengkapnya ada di [`PALETTE.md`](./PALETTE.md).
 
 Download file `.vsix` yang siap diinstal dari Release atau siapkan dengan mem-build sendiri.
 
+<details>
+<summary>Prasyarat dan cara tambahan untuk mem-build sendiri</summary>
+
+1. Clone repositori ini
+
+   ```
+   git clone https://github.com/yoelwep13578/univterbuka-vscode-theme ~/Downloads/univterbuka-vscode-theme
+   cd ~/Downloads/univterbuka-vscode-theme
+   ```
+
+2. Build sendiri
+
+   ```
+   npm install --global @vscode/vsce
+   vsce package
+   ```
+
+</details>
+
 **Instalasi**
 
-- **Lewat GUI VS Code:**
-  1. Buka VS Code → panel **Extensions** (`Ctrl+Shift+X` / `Cmd+Shift+X`)
-  2. Klik **`...`** (Views and More Actions) di kanan atas panel
-  3. Pilih **Install from VSIX...** → arahkan ke `univterbuka-vscode-theme-x.x.x.vsix`. `x.x.x` adalah nomor versi.
-- **Lewat terminal:**
-  ```bash
-  # Windows (PowerShell/CMD), macOS, Linux perintahnya sama bila `code` ada di PATH
-  code --install-extension univterbuka-vscode-theme-1.0.0.vsix
-  ```
+1. Buka panel **Extensions** (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+2. Klik **`...`** (Views and More Actions) di kanan atas panel
+3. Pilih **Install from VSIX...** → arahkan ke `univterbuka-vscode-theme-x.x.x.vsix` yang sudah di-download. `x.x.x` adalah nomor versi.
 
-**Mengaktifkan Color Theme**
+**Menggunakan Color Theme**
 
 `Ctrl+K Ctrl+T` (Windows/Linux) atau `Cmd+K Cmd+T` (macOS) → pilih **UnivTerbuka Light** atau **UnivTerbuka Dark**. 
 
-Atau lewat menu **File/Code → Preferences → Theme → Color Theme**.
+Atau lewat menu **File/Code → Preferences → Theme → Color Theme** dan pilih **UnivTerbuka Light** atau **UnivTerbuka Dark**.
 
 ### Cara 2. Copy Sendiri (Tanpa `.vsix`)
 
-Salin folder `univterbuka-vscode-theme` ke folder extension VS Code Anda:
+Salin folder `univterbuka-vscode-theme` ke folder extension VS Code / VS Codium Anda:
 
 | OS | Folder tujuan |
 |---|---|
@@ -113,7 +126,7 @@ Salin folder `univterbuka-vscode-theme` ke folder extension VS Code Anda:
 | **macOS** | `~/.vscode/extensions/univterbuka-vscode-theme` |
 | **Linux** | `~/.vscode/extensions/univterbuka-vscode-theme` |
 
-Lalu **restart VS Code** dan aktifkan tema seperti di atas.
+Lalu **tutup dan buka lagi**, kemudian aktifkan tema seperti di atas.
 
 Contoh perintah:
 
@@ -126,41 +139,64 @@ Copy-Item -Recurse .\univterbuka-vscode-theme "$env:USERPROFILE\.vscode\extensio
 cp -r univterbuka-vscode-theme ~/.vscode/extensions/
 ```
 
-### Cara 3. Tanpa Extension
+## Pengaturan Pendamping (Opsional)
 
-Jika hanya ingin mencoba warna editor tanpa memasang extension ini, salin isi `settings-snippet.json` (termasuk bagian `workbench.colorCustomizations` / `editor.tokenColorCustomizations` yang bisa Anda ekstrak dari file tema) ke Settings JSON Anda:
-`Ctrl+Shift+P` / `Cmd+Shift+P` → **Preferences: Open User Settings (JSON)**. 
+### Pasangan Kurung Berwarna dan Apply Color Theme
 
-Namun **Cara A/B tetap disarankan** agar seluruh elemen UI ikut berwarna.
+1. Buka Settings dengan memencet gambar gear (Manage) di sidebar --> Settings, atau `Ctrl+TANDA KOMA`
+2. Cari **Bracket Pair Colorization** dan beri centang agar tanda kurungnya berwarna
+3. Cari **Color Theme** dan pilih UnivTerbuka Dark atau UnivTerbuka Light
 
-### Pengaturan Pendamping (Opsional)
+Perkiraan isi di dalam `settings.json`
 
 ```jsonc
 // settings.json
 {
-  "workbench.colorTheme": "UnivTerbuka Dark",   // atau "UnivTerbuka Light"
-  "editor.bracketPairColorization.enabled": true
+  ...
+  "workbench.colorTheme": "UnivTerbuka Dark",
+  "editor.bracketPairColorization.enabled": true,
+  ...
 }
 ```
 
-### Membuat Theme Bisa Berganti Light & Dark Mengikuti OS (Opsional)
+### Color Theme Berganti Light/Dark Tergantung OS
+
+Lebih suka light mode dan dark mode-nya mengikuti sistem operasimu? Cobalah:
+
+1. Buka Settings dengan memencet gambar gear (Manage) di sidebar --> Settings, atau `Ctrl+TANDA KOMA`
+2. Cari **Detect Color Scheme** dan beri centang
+3. Cari **Preferred Light Color** dan pilih **UnivTerbuka Light**
+4. Cari **Preferred Dark Color** dan pilih **UnivTerbuka Dark**
+
+Perkiraan isi di dalam `settings.json`
 
 ```jsonc
 {
+  ...
   "window.autoDetectColorScheme": true,
   "workbench.preferredLightColorTheme": "UnivTerbuka Light",
-  "workbench.preferredDarkColorTheme": "UnivTerbuka Dark"
+  "workbench.preferredDarkColorTheme": "UnivTerbuka Dark",
+  ...
 }
 ```
 
 ### Uninstall
+Pilih salah satu cara yang menurutmu enak:
 
-- Buka panel **Extensions** → cari *UnivTerbuka Theme* → **Uninstall**
-- Atau jalankan perintah:
-  ```
-  code --uninstall-extension univterbuka-theme.univterbuka-vscode-theme`
-  ```
-- Atau hapus foldernya dari `.vscode/extensions`.
+**Dari VS Code / VS Codium**
+- Buka panel **Extensions**
+- Cari **UnivTerbuka VS Code Color Theme**
+- Pencet lambang gear --> **Uninstall**
+
+**Dari Terminal**
+```
+code --uninstall-extension yoeru.univterbuka-vscode-theme
+```
+
+Jika error, gantilah `code` dengan `code-oss` atau `codium`.
+
+**Dari File Manager**
+Hapus folder `yoeru.univterbuka-vscode-theme-x.x.x` dari `.vscode/extensions` atau `.vscode-oss/extensions`
 
 ## Struktur Repositori
 
@@ -170,8 +206,8 @@ univterbuka-vscode-theme/
 ├── themes/
 │   ├── univterbuka-light-color-theme.json      # UnivTerbuka Light
 │   └── univterbuka-dark-color-theme.json       # UnivTerbuka Dark
-├── images/icon.png                             # ikon ekstensi (buku kuning di atas biru UT)
-├── settings-snippet.json                       # cuplikan setting pendamping
+├── images/icon.png                             # ikon extension
+├── settings-snippet.json                       # contoh setting pendamping (tidak ngaruh ke extension)
 ├── PALETTE.md                                  # dokumentasi palet & rasional warna
 ├── README.md                                   # dokumen ini
 └── LICENSE
